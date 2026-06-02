@@ -78,8 +78,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const statData = [
         { target: new Date().getFullYear() - FOUNDED_YEAR, suffix: '년' },
         { target: 1200, suffix: '+' },
-        { target: 92, suffix: '%' },
-        { target: 38, suffix: '명' },
+        { target: 100, suffix: '%' },
+        { target: 2, suffix: '명' },
     ];
 
     const statObserver = new IntersectionObserver((entries) => {
