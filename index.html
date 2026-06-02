@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>법무법인 정도</title>
+
+<link rel="stylesheet" href="./css/css.css"/>
+
+<link rel="icon" type="image/svg+xml" href="./imgs/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="./imgs/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="./imgs/favicon-180.png">
+</head>
+<body>
+
+	<!-- ===== HEADER / NAV ===== -->
+	<header class="header" id="header">
+			<div class="header__inner">
+					<a href="#" class="logo">
+							<span class="logo__ch">正道</span>
+							<span class="logo__divider"></span>
+							<span class="logo__kr">법무법인 <span class="logo-white logo-bold">정도</span></span>
+					</a>
+					<nav class="nav">
+							<ul class="nav__list">
+									<li><a href="#about">법인 소개</a></li>
+									<li><a href="#practice">업무 분야</a></li>
+									<li><a href="#attorneys">구성원</a></li>
+									<li><a href="#cases">주요 사건</a></li>
+									<li><a href="#contact">상담 신청</a></li>
+							</ul>
+					</nav>
+					<button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+							<span></span><span></span><span></span>
+					</button>
+			</div>
+	</header>
+
+	<!-- Mobile Nav -->
+	<div class="mobile-nav" id="mobileNav">
+			<ul>
+					<li><a href="#about" class="mobile-nav__link">법인 소개</a></li>
+					<li><a href="#practice" class="mobile-nav__link">업무 분야</a></li>
+					<li><a href="#attorneys" class="mobile-nav__link">구성원</a></li>
+					<li><a href="#cases" class="mobile-nav__link">주요 사건</a></li>
+					<li><a href="#contact" class="mobile-nav__link">상담 신청</a></li>
+			</ul>
+	</div>
+
+	<!-- ===== HERO ===== -->
+	<section class="hero">
+			<div class="hero__bg">
+					<div class="hero__grain"></div>
+					<div class="hero__lines"></div>
+			</div>
+			<div class="hero__content">
+					<p class="hero__eyebrow reveal">FOUNDED 2011 · SEOUL, KOREA</p>
+					<h1 class="hero__title reveal">
+							<span>정의를</span>
+							<em>명확하게.</em>
+							<span>권리를</span>
+							<em>확실하게.</em>
+					</h1>
+					<p class="hero__sub reveal"><span class="years"></span>년의 신뢰, 1,200건의 승소.<br>법무법인 정도가 함께합니다.</p>
+					<div class="hero__cta reveal">
+							<a href="#contact" class="btn btn--primary">무료 상담 신청</a>
+							<a href="#practice" class="btn btn--ghost">업무 분야 보기</a>
+					</div>
+					<div class="hero__logo">
+						<img src="./imgs/jeongdo_logo-t-w.svg" alt="바른 길을 걷는, 법무법인 정도"/>
+					</div>
+			</div>
+			<div class="hero__scroll">
+					<span>SCROLL</span>
+					<div class="hero__scroll-line"></div>
+			</div>
+			<div class="hero__stats">
+				<div class="hero__stats__inner">
+					<div class="stat reveal">
+							<strong class="years"><span>년</span></strong>
+							<p>업력</p>
+					</div>
+					<div class="stat reveal">
+							<strong>4,200<span>+</span></strong>
+							<p>처리 사건</p>
+					</div>
+					<div class="stat reveal">
+							<strong>92<span>%</span></strong>
+							<p>의뢰인 만족도</p>
+					</div>
+					<div class="stat reveal">
+							<strong>2<span>명</span></strong>
+							<p>전문 변호사</p>
+					</div>
+				</div>
+			</div>
+	</section>
+
+	<!-- ===== ABOUT ===== -->
+	<section class="about" id="about">
+			<div class="container">
+					<div class="about__grid">
+							<div class="about__text">
+									<p class="section-label reveal">ABOUT US</p>
+									<h2 class="section-title reveal">법과 사람 사이,<br>정도가 있습니다</h2>
+									<p class="about__body reveal">
+											2011년 설립된 법무법인 정도는 기업법무, 민사소송, 형사변호, 가사·상속 등 다양한 분야에서 의뢰인의 권익을 최우선으로 보호해왔습니다.
+									</p>
+									<p class="about__body reveal">
+											단순한 법률 서비스를 넘어, 의뢰인의 상황을 깊이 이해하고 가장 합리적인 해결책을 제시하는 것이 저희의 철학입니다.
+									</p>
+									<a href="#attorneys" class="btn btn--line reveal">구성원 소개 →</a>
+							</div>
+							<div class="about__visual reveal">
+									<div class="about__img-wrap">
+											<div class="about__img-placeholder">
+													<div class="about__img-inner">
+															<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+																	<path d="M100 20 L180 60 L180 140 L100 180 L20 140 L20 60 Z" fill="none" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+																	<path d="M100 40 L160 70 L160 130 L100 160 L40 130 L40 70 Z" fill="none" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+																	<circle cx="100" cy="100" r="30" fill="none" stroke="currentColor" stroke-width="1" opacity="0.7"/>
+																	<line x1="100" y1="20" x2="100" y2="180" stroke="currentColor" stroke-width="0.5" opacity="0.2"/>
+																	<line x1="20" y1="100" x2="180" y2="100" stroke="currentColor" stroke-width="0.5" opacity="0.2"/>
+															</svg>
+															<p class="about__img-text">正道</p>
+													</div>
+											</div>
+									</div>
+									<div class="about__badge">
+											<strong>법조 윤리 우수법인</strong>
+											<span>대한변호사협회 선정 2023</span>
+									</div>
+							</div>
+					</div>
+			</div>
+	</section>
+
+	<!-- ===== PRACTICE AREAS ===== -->
+	<section class="practice" id="practice">
+			<div class="container">
+					<p class="section-label reveal">PRACTICE AREAS</p>
+					<h2 class="section-title reveal">전문 업무 분야</h2>
+					<p class="section-sub reveal">각 분야의 경험 있는 전문 변호사들이 최선의 결과를 위해 함께합니다.</p>
+					<div class="practice__grid">
+
+							<div class="practice__card reveal">
+									<div class="practice__num">01</div>
+									<div class="practice__icon">
+											<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="8" y="8" width="32" height="36" rx="2" stroke="currentColor" stroke-width="1.5"/>
+													<line x1="16" y1="20" x2="32" y2="20" stroke="currentColor" stroke-width="1.5"/>
+													<line x1="16" y1="28" x2="32" y2="28" stroke="currentColor" stroke-width="1.5"/>
+													<line x1="16" y1="36" x2="24" y2="36" stroke="currentColor" stroke-width="1.5"/>
+											</svg>
+									</div>
+									<h3>기업 법무</h3>
+									<p>M&A, 계약 검토, 기업 지배구조, 규제 대응 등 기업의 모든 법적 니즈를 처리합니다.</p>
+									<a href="#contact" class="practice__more">자세히 보기 →</a>
+							</div>
+
+							<div class="practice__card reveal">
+									<div class="practice__num">02</div>
+									<div class="practice__icon">
+											<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="1.5"/>
+													<path d="M16 24 L22 30 L32 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+											</svg>
+									</div>
+									<h3>민사 소송</h3>
+									<p>손해배상, 부동산, 금전 분쟁 등 민사 사건에서 의뢰인의 권리를 강력히 대변합니다.</p>
+									<a href="#contact" class="practice__more">자세히 보기 →</a>
+							</div>
+
+							<div class="practice__card reveal">
+									<div class="practice__num">03</div>
+									<div class="practice__icon">
+											<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M24 8 L40 16 L40 28 C40 36 32 42 24 44 C16 42 8 36 8 28 L8 16 Z" stroke="currentColor" stroke-width="1.5"/>
+													<line x1="24" y1="20" x2="24" y2="32" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+													<circle cx="24" cy="17" r="1.5" fill="currentColor"/>
+											</svg>
+									</div>
+									<h3>형사 변호</h3>
+									<p>수사 단계부터 항소심까지, 의뢰인의 권익 보호와 무죄 입증을 위해 최선을 다합니다.</p>
+									<a href="#contact" class="practice__more">자세히 보기 →</a>
+							</div>
+
+							<div class="practice__card reveal">
+									<div class="practice__num">04</div>
+									<div class="practice__icon">
+											<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<circle cx="18" cy="16" r="6" stroke="currentColor" stroke-width="1.5"/>
+													<circle cx="30" cy="16" r="6" stroke="currentColor" stroke-width="1.5"/>
+													<path d="M8 40 C8 32 12 28 18 28" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+													<path d="M40 40 C40 32 36 28 30 28" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+													<line x1="24" y1="30" x2="24" y2="40" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 2"/>
+											</svg>
+									</div>
+									<h3>가사·상속</h3>
+									<p>이혼, 양육권, 상속 분쟁 등 가족 관련 사안을 세심하고 전문적으로 처리합니다.</p>
+									<a href="#contact" class="practice__more">자세히 보기 →</a>
+							</div>
+
+							<div class="practice__card reveal">
+									<div class="practice__num">05</div>
+									<div class="practice__icon">
+											<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="10" y="22" width="28" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/>
+													<path d="M17 22 L17 16 C17 11.6 20.1 8 24 8 C27.9 8 31 11.6 31 16 L31 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+													<circle cx="24" cy="31" r="3" stroke="currentColor" stroke-width="1.5"/>
+											</svg>
+									</div>
+									<h3>지식재산권</h3>
+									<p>특허, 상표, 저작권 등 지식재산 보호와 분쟁 해결을 전담합니다.</p>
+									<a href="#contact" class="practice__more">자세히 보기 →</a>
+							</div>
+
+							<div class="practice__card reveal">
+									<div class="practice__num">06</div>
+									<div class="practice__icon">
+											<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<circle cx="24" cy="24" r="14" stroke="currentColor" stroke-width="1.5"/>
+													<path d="M24 10 L24 14 M24 34 L24 38 M10 24 L14 24 M34 24 L38 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+													<path d="M18 18 L30 30 M30 18 L18 30" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+											</svg>
+									</div>
+									<h3>국제 거래</h3>
+									<p>국제 계약, 무역 분쟁, 외국인 투자 관련 법률 서비스를 제공합니다.</p>
+									<a href="#contact" class="practice__more">자세히 보기 →</a>
+							</div>
+
+					</div>
+			</div>
+	</section>
+
+	<!-- ===== ATTORNEYS ===== -->
+	<section class="attorneys" id="attorneys">
+			<div class="container">
+					<p class="section-label reveal">OUR TEAM</p>
+					<h2 class="section-title reveal">구성원 소개</h2>
+					<div class="attorneys__grid">
+
+							<div class="attorney-card reveal">
+									<div class="attorney-card__photo">
+											<div class="attorney-card__photo-placeholder">
+													<svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+															<circle cx="40" cy="30" r="16" fill="none" stroke="currentColor" stroke-width="1"/>
+															<path d="M10 75 C10 55 22 48 40 48 C58 48 70 55 70 75" fill="none" stroke="currentColor" stroke-width="1"/>
+													</svg>
+											</div>
+									</div>
+									<div class="attorney-card__info">
+											<h3>차주한 <span>대표변호사</span></h3>
+											<ul>
+													<li>서울대학교 법학과 졸업</li>
+													<li>사법연수원 29기</li>
+													<li>전) 서울중앙지방검찰청 검사</li>
+													<li>기업법무, 민사소송 전문</li>
+											</ul>
+									</div>
+							</div>
+
+							<div class="attorney-card reveal">
+									<div class="attorney-card__photo">
+											<div class="attorney-card__photo-placeholder">
+													<svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+															<circle cx="40" cy="30" r="16" fill="none" stroke="currentColor" stroke-width="1"/>
+															<path d="M10 75 C10 55 22 48 40 48 C58 48 70 55 70 75" fill="none" stroke="currentColor" stroke-width="1"/>
+													</svg>
+											</div>
+									</div>
+									<div class="attorney-card__info">
+											<h3>강민재 <span>파트너변호사</span></h3>
+											<ul>
+													<li>서울대학교 법학과 졸업</li>
+													<li>사법연수원 36기</li>
+													<li>전) 법무법인 태광 소속</li>
+													<li>기업법무, 민사소송 전문</li>
+											</ul>
+									</div>
+							</div>
+
+							<div class="attorney-card reveal">
+									<div class="attorney-card__photo">
+											<div class="attorney-card__photo-placeholder">
+													<svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+															<circle cx="40" cy="30" r="16" fill="none" stroke="currentColor" stroke-width="1"/>
+															<path d="M10 75 C10 55 22 48 40 48 C58 48 70 55 70 75" fill="none" stroke="currentColor" stroke-width="1"/>
+													</svg>
+											</div>
+									</div>
+									<div class="attorney-card__info">
+											<h3>오양훈 <span>사무장</span></h3>
+											<ul>
+												<li>전) 서울중앙지방검찰청 검찰수사관</li>
+												<li>현) 법무법인 정도 사무장</li>
+											</ul>
+									</div>
+							</div>
+
+					</div>
+			</div>
+	</section>
+
+	<!-- ===== CASES / TRUST ===== -->
+	<section class="trust" id="cases">
+			<div class="trust__bg"></div>
+			<div class="container">
+					<p class="section-label reveal">WHY 正道</p>
+					<h2 class="section-title reveal">저희를 선택하는 이유</h2>
+					<div class="trust__items">
+							<div class="trust__item reveal">
+									<div class="trust__item-num">I</div>
+									<h3>철저한 사건 분석</h3>
+									<p>모든 사건에 대해 팀 전체가 리뷰하는 다중 검토 시스템을 운영합니다.</p>
+							</div>
+							<div class="trust__item reveal">
+									<div class="trust__item-num">II</div>
+									<h3>투명한 비용 공개</h3>
+									<p>착수 전 모든 비용을 명확히 안내하며, 예상치 못한 추가 청구는 없습니다.</p>
+							</div>
+							<div class="trust__item reveal">
+									<div class="trust__item-num">III</div>
+									<h3>신속한 소통</h3>
+									<p>담당 변호사와 직접 소통이 가능하며, 24시간 내 답변을 원칙으로 합니다.</p>
+							</div>
+							<div class="trust__item reveal">
+									<div class="trust__item-num">IV</div>
+									<h3>의뢰인 중심 접근</h3>
+									<p>법률적 해결만이 아닌, 의뢰인의 전체적인 상황을 고려한 최선책을 제시합니다.</p>
+							</div>
+					</div>
+
+					<!-- Testimonials -->
+					<div class="testimonials reveal">
+							<h3 class="testimonials__title">의뢰인의 이야기</h3>
+							<div class="testimonials__track" id="testimonialsTrack">
+									<div class="testimonial">
+											<p class="testimonial__quote">"억울하게 누명을 쓰고 아무도 믿어주지 않았을 때, 정말 큰 도움이 되어주셨습니다. 끝까지 진실을 밝혀주신 덕분에 무죄를 입증할 수 있었습니다."</p>
+											<p class="testimonial__author">— 김O준, 개인 의뢰인 (형사변호)</p>
+									</div>
+									<div class="testimonial">
+											<p class="testimonial__quote">"드라마 대본 표절 피해를 입었을 때 막막했는데, 정도에서 증거 하나하나를 꼼꼼히 확보해 주셨습니다. 대형 제작사를 상대로 끝까지 싸워 이길 수 있었던 건 전적으로 변호사님들 덕분입니다."</p>
+											<p class="testimonial__author">— 나O성, 개인 의뢰인 (저작권분쟁)</p>
+									</div>
+									<div class="testimonial">
+											<p class="testimonial__quote">"학교폭력 피해 사실을 학교와 가해자 측이 조직적으로 은폐하고 있었습니다. 법무법인 정도가 끝까지 진실을 밝혀준 덕분에 아이가 다시 웃을 수 있게 되었습니다."</p>
+											<p class="testimonial__author">— 40대 학부모 의뢰인 (학교폭력 피해구제)</p>
+									</div>
+									<div class="testimonial">
+											<p class="testimonial__quote">"사생활 침해로 극심한 고통을 받던 중 정도를 찾았습니다. 저의 명예를 되찾을 수 있었습니다."</p>
+											<p class="testimonial__author">— 정O준 (사생활 침해·명예훼손)</p>
+									</div>
+									<div class="testimonial">
+											<p class="testimonial__quote">"신약 부작용 사실을 보도했다는 이유로 대기업으로부터 명예훼손 고소를 당했습니다. 법무법인 정도 덕분에 진실이 세상에 알려졌고, 무혐의로 사건이 마무리되었습니다."</p>
+											<p class="testimonial__author">— 조O준 (언론·명예훼손 방어)</p>
+									</div>
+									<div class="testimonial">
+											<p class="testimonial__quote">"대기업을 상대로 한 사건이라 엄두가 나지 않았습니다. 정도는 포기하지 않고 증거를 확보해 주었고, 결국 승소할 수 있었습니다. 의뢰인 편에서 끝까지 싸워주는 법인입니다."</p>
+											<p class="testimonial__author">— 김O영 (형사변호)</p>
+									</div>
+							</div>
+							<div class="testimonials__controls">
+								<button class="testimonials__btn" id="testimonialPrev">&#8592;</button>
+								<button class="testimonials__btn" id="testimonialNext">&#8594;</button>
+							</div>
+							<div class="testimonials__dots" id="testimonialsDots">
+									<button class="dot active" data-idx="0"></button>
+									<button class="dot" data-idx="1"></button>
+									<button class="dot" data-idx="2"></button>
+									<button class="dot" data-idx="3"></button>
+									<button class="dot" data-idx="4"></button>
+									<button class="dot" data-idx="5"></button>
+							</div>
+					</div>
+			</div>
+	</section>
+
+	<!-- ===== CONTACT ===== -->
+	<section class="contact" id="contact">
+			<div class="container">
+					<div class="contact__grid">
+							<div class="contact__info">
+									<p class="section-label reveal">CONTACT</p>
+									<h2 class="section-title reveal">상담 신청</h2>
+									<p class="contact__body reveal">첫 상담은 무료입니다.<br>부담 없이 문의해 주세요.</p>
+									<ul class="contact__details reveal">
+											<li>
+													<strong>주소</strong>
+													<span>서울특별시 서초구 서초동 1234<br>정도빌딩 15층</span>
+											</li>
+											<li>
+													<strong>전화</strong>
+													<span>02-1234-5678</span>
+											</li>
+											<li>
+													<strong>이메일</strong>
+													<span>contact@jungdo-law.kr</span>
+											</li>
+											<li>
+													<strong>운영시간</strong>
+													<span>평일 09:00 – 18:00<br>토요일 10:00 – 14:00 (예약제)</span>
+											</li>
+									</ul>
+							</div>
+							<div class="contact__form-wrap reveal">
+									<form class="contact__form" id="contactForm">
+											<div class="form-group">
+													<label for="name">성함 *</label>
+													<input type="text" id="name" name="name" placeholder="홍길동" required>
+											</div>
+											<div class="form-group">
+													<label for="phone">연락처 *</label>
+													<input type="tel" id="phone" name="phone" placeholder="010-0000-0000" required>
+											</div>
+											<div class="form-group">
+													<label for="area">상담 분야</label>
+													<select id="area" name="area">
+															<option value="">분야를 선택해 주세요</option>
+															<option>기업 법무</option>
+															<option>민사 소송</option>
+															<option>형사 변호</option>
+															<option>가사·상속</option>
+															<option>지식재산권</option>
+															<option>국제 거래</option>
+															<option>기타</option>
+													</select>
+											</div>
+											<div class="form-group">
+													<label for="message">문의 내용</label>
+													<textarea id="message" name="message" rows="4" placeholder="상담하실 내용을 간략히 적어주세요."></textarea>
+											</div>
+											<button type="submit" class="btn btn--primary btn--full">상담 신청하기</button>
+											<p class="form-note">* 입력하신 정보는 상담 목적으로만 사용되며, 외부에 공개되지 않습니다.</p>
+									</form>
+							</div>
+					</div>
+			</div>
+	</section>
+
+	<!-- ===== FOOTER ===== -->
+	<footer class="footer">
+			<div class="container">
+					<div class="footer__top">
+							<div class="footer__brand">
+									<p class="footer__logo">正道</p>
+									<p class="footer__tagline">법무법인 정도</p>
+									<p class="footer__desc">2011년 설립. 서울 서초구.</p>
+							</div>
+							<div class="footer__links">
+									<ul>
+											<li><a href="#about">법인 소개</a></li>
+											<li><a href="#practice">업무 분야</a></li>
+											<li><a href="#attorneys">구성원</a></li>
+											<li><a href="#contact">상담 신청</a></li>
+									</ul>
+							</div>
+							<div class="footer__contact">
+									<p>02-1234-5678</p>
+									<p>contact@jungdo-law.kr</p>
+									<p>서울 서초구 서초동 1234</p>
+							</div>
+					</div>
+					<div class="footer__bottom">
+							<p>© 2024 법무법인 정도. All rights reserved.</p>
+							<p>홈페이지 제작 : 트위터 비정착오타쿠 @nomadotaku999</p>
+							<p>본 사이트의 내용은 웹소설 '너희들은 변호됐다'의 팬사이트이며, 실존하는 법률 자문 업체가 아닙니다.</p>
+					</div>
+			</div>
+	</footer>
+
+	<script src="./js/script.js"></script>
+</body>
+</html>
