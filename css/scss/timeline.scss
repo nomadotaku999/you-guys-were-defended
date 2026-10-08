@@ -1,0 +1,362 @@
+@use 'variables' as *;
+
+// ── 공통 reveal ──────────────────────────────────────────────
+.reveal-tl {
+    opacity: 0;
+    transform: translateY(36px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+
+    &.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tl-hero {
+    position: relative;
+    min-height: 56vh;
+    background: $navy;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    padding: 140px 24px 80px;
+
+    &__bg {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(ellipse at 50% 0%, $navy-light 0%, $navy 65%);
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(to right, rgba($gold, 0.04) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba($gold, 0.04) 1px, transparent 1px);
+            background-size: 64px 64px;
+        }
+    }
+
+    &__content {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__eyebrow {
+        font-size: 0.7rem;
+        font-weight: 500;
+        letter-spacing: 0.3em;
+        color: $gold;
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        font-family: $font-display;
+        font-size: clamp(2.4rem, 6vw, 4rem);
+        font-weight: 300;
+        color: $white;
+        margin-bottom: 20px;
+        letter-spacing: 0.02em;
+    }
+
+    &__sub {
+        font-size: 0.95rem;
+        color: rgba($white, 0.55);
+        line-height: 1.8;
+    }
+
+    &__scroll {
+        position: absolute;
+        bottom: 36px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        color: rgba($white, 0.3);
+        font-size: 0.6rem;
+        letter-spacing: 0.25em;
+        z-index: 1;
+    }
+
+    &__scroll-line {
+        width: 1px;
+        height: 40px;
+        background: linear-gradient(to bottom, rgba($gold, 0.6), transparent);
+    }
+}
+
+// 현재 페이지 네비 강조
+.nav__list a.active {
+    color: $gold !important;
+}
+
+// ============================================================
+// TIMELINE
+// ============================================================
+.timeline {
+    position: relative;
+    background: $cream;
+    padding: 100px 24px 60px;
+    overflow: hidden;
+
+    // 중앙 골드 스파인
+    &__spine {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 150px;
+        height: 100%;
+        z-index: 0;
+    }
+
+    &__spine-fill {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0%;
+        background: linear-gradient(to bottom, $gold, $gold-light);
+        transition: height 0.1s linear;
+
+        mask-image: linear-gradient(to bottom, black 0%, black 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 85%, transparent 100%);
+    }
+
+    &__list {
+        position: relative;
+        z-index: 1;
+        max-width: 1080px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 140px;
+    }
+
+    &__end {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        margin-top: 120px;
+        padding-top: 48px;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 1px;
+            height: 48px;
+            background: linear-gradient(to bottom, $gold, transparent);
+            margin: 0 auto 24px;
+        }
+
+        p {
+            font-family: $font-display;
+            font-style: italic;
+            font-size: 1.2rem;
+            color: $text-light;
+            line-height: 1.7;
+        }
+    }
+}
+
+// ============================================================
+// TL ITEM
+// ============================================================
+.tl-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 140px 1fr;
+    align-items: center;
+    gap: 0 40px;
+
+    &--left {
+        .tl-item__media { grid-column: 1; justify-self: end; }
+        .tl-item__body  { grid-column: 3; justify-self: start; text-align: left; }
+    }
+
+    &--right {
+        grid-template-columns: 1fr 140px 1fr;
+
+        .tl-item__media { grid-column: 3; justify-self: start; order: 2; grid-row: 1; }
+        .tl-item__body  { grid-column: 1; justify-self: end; text-align: right; order: 1; }
+        .tl-item__ep    { order: 1; grid-column: 2; }
+    }
+
+    // 아이콘 메달리온
+    &__media {
+        width: 84px;
+        height: 84px;
+        border-radius: 50%;
+        background: $navy;
+        border: 2px solid $gold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: $shadow-md;
+        flex-shrink: 0;
+    }
+
+    &__icon {
+        width: 38px;
+        height: 38px;
+        color: $gold-light;
+
+        svg { width: 100%; height: 100%; }
+    }
+
+    // 화수 — 라인 위에 배치되는 큰 숫자
+    &__ep {
+        grid-column: 2;
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    &__ep-num {
+        font-family: $font-display;
+        font-size: 2.6rem;
+        font-weight: 600;
+        color: $cream;
+        -webkit-text-stroke: 1.5px $navy;
+        line-height: 1;
+        letter-spacing: -0.02em;
+    }
+
+    &__ep-label {
+        margin-top: 4px;
+        font-size: 0.62rem;
+        letter-spacing: 0.25em;
+        color: $text-light;
+    }
+
+    // 본문
+    &__body {
+        max-width: 380px;
+    }
+
+    &__category {
+        font-size: 0.7rem;
+        font-weight: 500;
+        letter-spacing: 0.15em;
+        color: $gold;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        font-family: $font-display;
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: $navy;
+        line-height: 1.35;
+        margin-bottom: 14px;
+    }
+
+    &__desc {
+        font-size: 0.86rem;
+        color: $text-mid;
+        line-height: 1.85;
+        margin-bottom: 16px;
+    }
+
+    &__tag {
+        display: inline-block;
+        font-size: 0.72rem;
+        letter-spacing: 0.04em;
+        color: $navy;
+        background: $cream-dark;
+        border: 1px solid $gray-2;
+        padding: 6px 14px;
+        border-radius: 2px;
+    }
+
+    // featured (마지막 사건) 강조
+    &--featured {
+        .tl-item__media { background: $gold; border-color: $navy; }
+        .tl-item__icon  { color: $navy; }
+        .tl-item__ep-num {
+            color: $gold;
+            -webkit-text-stroke: 1.5px $navy;
+        }
+        .tl-item__title { color: $navy; }
+        .tl-item__tag {
+            background: $navy;
+            color: $gold-light;
+            border-color: $navy;
+        }
+    }
+}
+
+// ============================================================
+// RESPONSIVE
+// ============================================================
+@media (max-width: 860px) {
+    .timeline__spine { left: 32px; transform: none; }
+    .timeline__list { gap: 100px; }
+
+    .tl-item {
+        grid-template-columns: 64px 1fr;
+        gap: 0 20px;
+
+        &--left,
+        &--right {
+            grid-template-columns: 64px 1fr;
+
+            .tl-item__media {
+                grid-column: 1;
+                grid-row: 1;
+                justify-self: center;
+                order: 0;
+                width: 64px;
+                height: 64px;
+            }
+
+            .tl-item__icon { width: 28px; height: 28px; }
+
+            .tl-item__ep {
+                grid-column: 1;
+                grid-row: 2;
+                order: 0;
+            }
+
+            .tl-item__body {
+                grid-column: 2;
+                grid-row: 1 / 3;
+                justify-self: start;
+                text-align: left;
+                order: 0;
+                max-width: 100%;
+            }
+        }
+    }
+
+    .tl-item__ep-num { font-size: 1.8rem; }
+    .tl-item__title { font-size: 1.3rem; }
+}
+
+@media (max-width: 480px) {
+    .timeline { padding: 80px 16px 40px; }
+    .timeline__spine { left: 24px; }
+
+    .tl-item {
+        grid-template-columns: 48px 1fr;
+        gap: 0 14px;
+
+        &--left,
+        &--right {
+            grid-template-columns: 48px 1fr;
+
+            .tl-item__media { width: 48px; height: 48px; }
+            .tl-item__icon { width: 22px; height: 22px; }
+        }
+    }
+}

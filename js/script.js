@@ -182,6 +182,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // ── 유튜브 영상 ───────────────────────────
+    // data-youtube-id가 있으면 썸네일을 표시하고, 클릭할 때 플레이어를 불러옴
+    document.querySelectorAll('.video-card').forEach(card => {
+        const id = (card.dataset.youtubeId || '').trim();
+        const thumb = card.querySelector('.video-card__thumb');
+        if (!id || !thumb) return;
+
+        thumb.style.backgroundImage = `url(https://i.ytimg.com/vi/${id}/hqdefault.jpg)`;
+
+        thumb.addEventListener('click', () => {
+            const iframe = document.createElement('iframe');
+            iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
+            iframe.title = card.querySelector('h4')?.textContent || 'YouTube video';
+            iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+            iframe.allowFullscreen = true;
+            thumb.replaceWith(iframe);
+        }, { once: true });
+    });
 
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav__list a');
